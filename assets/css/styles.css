@@ -20,24 +20,27 @@
   --radius-sm:6px;
 
   --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  --shadow: 0 16px 52px rgba(0,0,0,.55);
 }
 
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
+
 body{
   margin:0;
   font-family:var(--font);
   color:var(--text);
   line-height:1.55;
   background:
-    radial-gradient(900px 540px at 18% 8%, rgba(122,76,227,.18), transparent 62%),
-    radial-gradient(900px 540px at 82% 12%, rgba(58,23,105,.22), transparent 62%),
+    radial-gradient(900px 540px at 18% 8%, rgba(122,76,227,.16), transparent 62%),
+    radial-gradient(900px 540px at 82% 12%, rgba(58,23,105,.20), transparent 62%),
     linear-gradient(180deg, var(--bg2), var(--bg0));
 }
 
 a{ color:inherit; text-decoration:none; }
 .container{ width:min(var(--max), calc(100% - 40px)); margin:0 auto; }
 
+/* ===== Skip link ===== */
 .skip{
   position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
 }
@@ -51,18 +54,31 @@ a{ color:inherit; text-decoration:none; }
 
 /* ===== Header ===== */
 .site-header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter: blur(10px);
+  background: rgba(5,6,11,.80);
+  border-bottom: 1px solid var(--line);
   min-height: 96px;
 }
+
 .header-inner{
-  padding: 14px 0;
+  display:flex;
   align-items:center;
+  justify-content:space-between;
+  padding:14px 0;
+  gap:18px;
 }
+
+/* Brand */
 .brand{
+  display:flex;
+  align-items:center;
   gap:16px;
+  min-width: 260px;
 }
 
-
-/* Engraved logo mark */
 .logo-img{
   width:64px !important;
   height:64px !important;
@@ -75,8 +91,9 @@ a{ color:inherit; text-decoration:none; }
   border: none;
   border-radius: 0;
 
+  /* “engraved” contrast */
   filter:
-    drop-shadow(0 1px 0 rgba(255,255,255,.10))
+    drop-shadow(0 1px 0 rgba(255,255,255,.12))
     drop-shadow(0 -1px 0 rgba(0,0,0,.70));
 }
 
@@ -89,22 +106,21 @@ a{ color:inherit; text-decoration:none; }
   }
 }
 
-
 .brand-name{
-  font-weight:650;          /* down from 780/700 */
-  font-size:16px;           /* slightly smaller */
+  font-weight:650;
+  font-size:16px;
   letter-spacing:.2px;
   line-height:1.1;
 }
-
 .brand-tagline{
   font-size:12px;
-  opacity:.85;
+  opacity:.86;
   line-height:1.2;
   margin-top:4px;
+  color:var(--muted);
 }
 
-
+/* Nav */
 .nav{
   display:flex;
   align-items:center;
@@ -125,11 +141,11 @@ a{ color:inherit; text-decoration:none; }
 }
 .nav a.active{
   color: var(--text);
-  border-color: rgba(122,76,227,.28);
+  border-color: rgba(122,76,227,.30);
   background: rgba(122,76,227,.05);
 }
 
-/* ===== Buttons (less pill, more “site” controls) ===== */
+/* ===== Buttons: “controls”, not pills ===== */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -144,7 +160,7 @@ a{ color:inherit; text-decoration:none; }
 }
 .btn:hover{
   transform: translateY(-1px);
-  border-color: rgba(180,155,255,.42);
+  border-color: rgba(180,155,255,.44);
   background: rgba(122,76,227,.06);
 }
 .btn:active{ transform: translateY(0); }
@@ -158,7 +174,7 @@ a{ color:inherit; text-decoration:none; }
 }
 .btn-small{ padding:9px 12px; }
 
-/* ===== Type ===== */
+/* ===== Typography ===== */
 h1{
   font-size: clamp(34px, 4vw, 50px);
   line-height:1.08;
@@ -166,6 +182,7 @@ h1{
 }
 h2{ margin:0 0 8px; font-size:26px; }
 h3{ margin:0 0 8px; }
+
 .lead{
   margin:0 0 18px;
   color: var(--muted);
@@ -174,17 +191,17 @@ h3{ margin:0 0 8px; }
 }
 .sub{ margin:0 0 18px; color: var(--muted); }
 
-/* ===== Layout sections (Apollo-like “part of the page”) ===== */
+/* ===== Section system (more “part of page”) ===== */
 .section{
   padding:52px 0;
 }
 .section.alt{
-  background: rgba(255,255,255,.015);
+  background: rgba(255,255,255,.014);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
-/* Section header accent line */
+/* Optional helper if you decide to add it later */
 .section-head{
   display:flex;
   align-items:flex-end;
@@ -200,7 +217,7 @@ h3{ margin:0 0 8px; }
   opacity:.9;
 }
 
-/* ===== HERO becomes a section, not a floating card layout ===== */
+/* ===== Hero as a section (not floaty cards) ===== */
 .hero{
   padding:56px 0 40px;
   border-bottom: 1px solid var(--line);
@@ -212,29 +229,15 @@ h3{ margin:0 0 8px; }
   align-items:start;
 }
 
-/* Right column “panel” (still a panel, but not bubbly) */
-.panel{
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,.02);
-  padding:18px;
-  border-radius: var(--radius);
-  position:relative;
-}
-.panel::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius: var(--radius);
-  pointer-events:none;
-  box-shadow: inset 0 0 0 1px rgba(122,76,227,.10);
-}
-.panel-title{
-  font-weight:700;
-  margin-bottom:10px;
-}
+.hero-cta{ display:flex; gap:12px; flex-wrap:wrap; margin:16px 0 12px; }
 
-/* ===== “Badges” are inline labels (no bubbles) ===== */
-.badges{ display:flex; gap:14px; flex-wrap:wrap; margin-top:10px; }
+/* ===== Badges: inline labels (no pills) ===== */
+.badges{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
 .badge{
   font-size:12.5px;
   color: rgba(255,255,255,.80);
@@ -250,12 +253,49 @@ h3{ margin:0 0 8px; }
   border-radius: 1px;
 }
 
-/* ===== Grids (services, partner blocks, etc.) ===== */
+/* ===== Panels (used for “Typical outcomes” / “What we help with”) ===== */
+.card, .callout{
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.02);
+  padding:18px;
+  border-radius: var(--radius);
+  position:relative;
+}
+
+/* Thin inner violet rule so it looks “built in” */
+.card::after, .callout::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius: var(--radius);
+  pointer-events:none;
+  box-shadow: inset 0 0 0 1px rgba(122,76,227,.08);
+}
+
+/* Light corner tick for “technical” feeling */
+.card::before, .callout::before{
+  content:"";
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:36px;
+  height:18px;
+  border-top: 1px solid rgba(122,76,227,.18);
+  border-right: 1px solid rgba(122,76,227,.18);
+  opacity:.7;
+  pointer-events:none;
+}
+
+.card p{ margin:0; color: var(--muted); }
+.card ul{ margin:12px 0 0; padding-left:18px; color: rgba(255,255,255,.78); }
+
+/* ===== Grids ===== */
 .grid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap:14px;
 }
+
 .tile{
   border: 1px solid var(--line);
   background: rgba(255,255,255,.02);
@@ -270,7 +310,7 @@ h3{ margin:0 0 8px; }
   inset:0;
   border-radius: var(--radius);
   pointer-events:none;
-  box-shadow: inset 0 0 0 1px rgba(122,76,227,.08);
+  box-shadow: inset 0 0 0 1px rgba(122,76,227,.06);
 }
 .tile:hover{
   transform: translateY(-1px);
@@ -278,7 +318,6 @@ h3{ margin:0 0 8px; }
   background: rgba(122,76,227,.03);
 }
 
-/* Two-column blocks */
 .two-col{
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -286,24 +325,7 @@ h3{ margin:0 0 8px; }
   align-items:start;
 }
 
-/* Callouts */
-.callout{
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,.02);
-  padding:18px;
-  border-radius: var(--radius);
-  position:relative;
-}
-.callout::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius: var(--radius);
-  pointer-events:none;
-  box-shadow: inset 0 0 0 1px rgba(122,76,227,.08);
-}
-
-/* Footer */
+/* ===== Footer ===== */
 .footer{
   padding:26px 0 44px;
   border-top: 1px solid var(--line);
@@ -319,9 +341,10 @@ h3{ margin:0 0 8px; }
 .footer-cta{ display:flex; gap:10px; flex-wrap:wrap; }
 .muted{ color: var(--muted); font-size:13px; }
 
-/* Forms */
+/* ===== Forms ===== */
 .form{ display:grid; gap:12px; max-width:720px; }
 .field{ display:grid; gap:8px; }
+
 input, textarea{
   width:100%;
   padding:12px 12px;
@@ -338,13 +361,17 @@ input:focus, textarea:focus{
 textarea{ min-height:140px; resize:vertical; }
 small{ color: var(--muted); }
 
-/* Responsive */
-@media (min-width: 900px){
+/* ===== Responsive ===== */
+@media (max-width: 920px){
+  .hero-inner{ grid-template-columns: 1fr; }
+  .grid{ grid-template-columns: 1fr; }
+  .two-col{ grid-template-columns: 1fr; }
+  .brand{ min-width:auto; }
+  .site-header{ min-height: 88px; }
   .logo-img{
-    width:52px !important;
-    height:52px !important;
-    max-width:52px !important;
-    max-height:52px !important;
+    width:54px !important;
+    height:54px !important;
+    max-width:54px !important;
+    max-height:54px !important;
   }
 }
-
