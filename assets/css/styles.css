@@ -75,18 +75,22 @@ a{ color:inherit; text-decoration:none; }
 
 /* Engraved logo mark */
 .logo-img{
-  width:32px !important;
-  height:32px !important;
-  max-width:32px !important;
-  max-height:32px !important;
+  width:44px !important;
+  height:44px !important;
+  max-width:44px !important;
+  max-height:44px !important;
+
   display:block;
   object-fit:contain;
+
   background: transparent;
-  border-radius: 0;
   border: none;
+  border-radius: 0;
+
+  /* engraved contrast */
   filter:
-    drop-shadow(0 1px 0 rgba(255,255,255,.06))
-    drop-shadow(0 -1px 0 rgba(0,0,0,.55));
+    drop-shadow(0 1px 0 rgba(255,255,255,.10))
+    drop-shadow(0 -1px 0 rgba(0,0,0,.65));
 }
 @media (min-width: 900px){
   .logo-img{
@@ -334,9 +338,12 @@ textarea{ min-height:140px; resize:vertical; }
 small{ color: var(--muted); }
 
 /* Responsive */
-@media (max-width: 920px){
-  .hero-inner{ grid-template-columns: 1fr; }
-  .grid{ grid-template-columns: 1fr; }
-  .two-col{ grid-template-columns: 1fr; }
-  .brand{ min-width:auto; }
+@media (min-width: 900px){
+  .logo-img{
+    width:52px !important;
+    height:52px !important;
+    max-width:52px !important;
+    max-height:52px !important;
+  }
 }
+
