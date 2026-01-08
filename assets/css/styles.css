@@ -75,10 +75,10 @@ a{ color:inherit; text-decoration:none; }
 
 /* Engraved logo mark */
 .logo-img{
-  width:44px !important;
-  height:44px !important;
-  max-width:44px !important;
-  max-height:44px !important;
+  width:90px !important;
+  height:90px !important;
+  max-width:90px !important;
+  max-height:90px !important;
 
   display:block;
   object-fit:contain;
