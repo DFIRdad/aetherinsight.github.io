@@ -51,6 +51,7 @@ a{ color:inherit; text-decoration:none; }
 
 /* ===== Header ===== */
 .site-header{
+  min-height: 84px;
   position:sticky;
   top:0;
   z-index:50;
