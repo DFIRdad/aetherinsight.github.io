@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | Aether Insight Forensics</title>
+  <meta name="description" content="Contact Aether Insight Forensics." />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <div class="logo-mark" aria-hidden="true"></div>
+        <div>
+          <div class="brand-name">Aether Insight Forensics</div>
+          <div class="brand-tagline">Incident Response • Digital Forensics • Advisory</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a data-nav href="/">Home</a>
+        <a data-nav href="/services/">Services</a>
+        <a data-nav href="/about/">About</a>
+        <a data-nav class="btn btn-small" href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h1>Contact us</h1>
+          <p class="lead">
+            Send a short note about what’s going on and what you need. This form is a front-end placeholder (no backend yet).
+          </p>
+          <div class="badges">
+            <span class="badge">Confidential</span>
+            <span class="badge">Practical next steps</span>
+            <span class="badge">Clear deliverables</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Direct</h3>
+          <p class="muted">Replace with your real contact info when ready.</p>
+          <ul>
+            <li>Email: you@domain.com</li>
+            <li>Location: Texas • Remote</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Send a message</h2>
+        <p class="sub">No data is submitted anywhere yet — it’s just UI.</p>
+
+        <form class="form" onsubmit="event.preventDefault(); alert('Placeholder form — connect a backend later.');">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" autocomplete="name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <label for="topic">What do you need help with?</label>
+            <input id="topic" name="topic" placeholder="Incident response, forensics, advisory…" required />
+          </div>
+
+          <div class="field">
+            <label for="msg">Brief summary</label>
+            <textarea id="msg" name="msg" placeholder="Timeline, systems involved, current status…" required></textarea>
+            <small>Don’t include sensitive data you wouldn’t email.</small>
+          </div>
+
+          <button class="btn" type="submit">Send (placeholder)</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="brand-name">Aether Insight Forensics LLC</div>
+        <div class="muted">© <span id="year"></span></div>
+      </div>
+      <div class="footer-cta">
+        <a class="btn btn-small" href="/services/">Services</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
