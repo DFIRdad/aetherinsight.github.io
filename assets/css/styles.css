@@ -62,13 +62,16 @@ a{color:inherit;text-decoration:none}
 .brand{display:flex; align-items:center; gap:12px; min-width: 260px;}
 .logo-img{
   width:38px; height:38px;
+  max-width: 38px;
+  max-height: 38px;
   border-radius:12px;
   display:block;
   object-fit:contain;
   background: rgba(255,255,255,.04);
   border: 1px solid rgba(255,255,255,.10);
   box-shadow: var(--shadowSoft);
-  padding: 6px; /* gives it that “badge” feel like your card */
+  padding: 4px; /* gives it that “badge” feel like your card */
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
 }
 .brand-name{font-weight:780; letter-spacing:.2px}
 .brand-tagline{font-size:12.5px; color:var(--muted); margin-top:2px}
