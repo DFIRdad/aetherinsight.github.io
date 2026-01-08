@@ -82,10 +82,10 @@ a{ color:inherit; text-decoration:none; }
 }
 
 .logo-img{
-  width:28px !important;
-  height:28px !important;
-  max-width:28px !important;
-  max-height:28px !important;
+  width:48px !important;
+  height:48px !important;
+  max-width:48px !important;
+  max-height:48px !important;
   display:block;
   object-fit:contain;
 
