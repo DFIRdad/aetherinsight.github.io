@@ -95,10 +95,10 @@ a{ color:inherit; text-decoration:none; }
 }
 @media (min-width: 900px){
   .logo-img{
-    width:40px !important;
-    height:40px !important;
-    max-width:40px !important;
-    max-height:40px !important;
+    width:72px !important;
+    height:72px !important;
+    max-width:72px !important;
+    max-height:72px !important;
   }
 }
 
