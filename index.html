@@ -36,16 +36,17 @@
 
   <main id="content">
 
-    <!-- ===== Splash / Above-the-fold (CrowdStrike-style slider) ===== -->
+    <!-- ===== Hero Slider ===== -->
     <section class="hero hero-slider" aria-label="Featured highlights">
-      <div class="container hero-inner hero-split">
+      <div class="container hero-split">
 
-        <!-- LEFT: copy that changes -->
+        <!-- Left column -->
         <div class="hero-copy">
           <div class="hero-kicker" id="hk">Incident Response</div>
           <h1 id="ht">Forensics-ready clarity when it matters most.</h1>
+
           <p class="lead" id="hd">
-            Rapid intake, scoped action, and evidence-aware guidance to reduce uncertainty and protect what matters.
+            Rapid intake and evidence-aware investigation support designed for high-pressure incidents and defensible outcomes.
           </p>
 
           <div class="hero-cta" id="hcta">
@@ -53,7 +54,7 @@
             <a class="btn btn-ghost" href="services/">Explore services</a>
           </div>
 
-          <p class="sub" style="margin-top:10px;">
+          <p class="sub hero-sub">
             Based in Texas • Remote support available • Confidential by default
           </p>
 
@@ -71,41 +72,51 @@
           </div>
         </div>
 
-        <!-- RIGHT: 3 clickable tiles (also change slide) -->
+        <!-- Right column -->
         <div class="hero-panel" id="hero-panel" role="tabpanel" tabindex="0" aria-live="polite">
+          <div class="hero-panel-head">
+            <div class="hero-panel-title">Focus areas</div>
+            <div class="hero-panel-rule"></div>
+          </div>
+
           <div class="hero-tiles">
             <button class="hero-tile is-active" data-slide="0">
               <div class="tile-eyebrow">Incident Response</div>
-              <div class="tile-title">Triage and direction fast</div>
-              <div class="tile-desc">Containment guidance, scope control, and evidence-aware decisioning.</div>
-              <div class="tile-link">Learn more →</div>
+              <div class="tile-title">Triage, scope control, next steps</div>
+              <div class="tile-desc">Containment guidance and coordination designed to keep evidence handling clean.</div>
             </button>
 
             <button class="hero-tile" data-slide="1">
               <div class="tile-eyebrow">Digital Forensics</div>
               <div class="tile-title">Timelines and defensible findings</div>
-              <div class="tile-desc">Acquisition planning, analysis, and reporting you can brief to stakeholders.</div>
-              <div class="tile-link">Learn more →</div>
+              <div class="tile-desc">Acquisition planning, analysis, and reporting suitable for stakeholders and counsel.</div>
             </button>
 
             <button class="hero-tile" data-slide="2">
               <div class="tile-eyebrow">Readiness & Advisory</div>
-              <div class="tile-title">Be ready before it hits</div>
-              <div class="tile-desc">Playbooks, tabletop support, process uplift, and pragmatic controls.</div>
-              <div class="tile-link">Learn more →</div>
+              <div class="tile-title">Preparedness that reduces chaos</div>
+              <div class="tile-desc">Playbooks, tabletop support, process uplift, and pragmatic improvements.</div>
             </button>
+          </div>
+
+          <div class="hero-panel-foot">
+            <a class="link" href="services/">See full service detail →</a>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- ===== “Ton of info” starts here ===== -->
+    <!-- ===== Content stack ===== -->
     <section class="section">
       <div class="container">
-        <h2>What we do</h2>
+        <div class="section-head">
+          <h2>What we do</h2>
+          <div class="section-rule"></div>
+        </div>
+
         <p class="sub">
-          Modular services designed for high-pressure moments and clean handoffs.
+          Modular support that meets you where you are — from a focused deliverable to end-to-end engagement support.
         </p>
 
         <div class="grid">
@@ -123,7 +134,7 @@
           </div>
         </div>
 
-        <div style="margin-top:16px;">
+        <div class="sp-16">
           <a class="btn btn-ghost" href="services/">View services →</a>
         </div>
       </div>
@@ -131,35 +142,37 @@
 
     <section class="section alt">
       <div class="container">
-        <h2>How we work</h2>
+        <div class="section-head">
+          <h2>How we work</h2>
+          <div class="section-rule"></div>
+        </div>
+
         <p class="sub">
-          A simple engagement model that stays calm under pressure.
+          A calm engagement model: scope intentionally, preserve what matters, and report clearly.
         </p>
 
         <div class="two-col">
           <div class="callout">
             <h3>1) Scope with intent</h3>
             <p class="muted">
-              We align on objectives, constraints, stakeholders, and what “done” looks like before touching systems.
+              Align on objectives, constraints, and stakeholders before touching systems.
             </p>
           </div>
-
           <div class="callout">
-            <h3>2) Preserve what matters</h3>
+            <h3>2) Evidence-aware handling</h3>
             <p class="muted">
-              Evidence-aware actions to support investigations, insurance, legal, and internal decision-making.
+              Decisions and actions built around integrity, traceability, and defensibility.
             </p>
           </div>
         </div>
 
-        <div class="two-col" style="margin-top:14px;">
+        <div class="two-col sp-14">
           <div class="callout">
             <h3>3) Analyze and narrate</h3>
             <p class="muted">
-              Timelines and findings presented clearly for technical teams and leadership.
+              Timelines and findings presented for technical teams and leadership.
             </p>
           </div>
-
           <div class="callout">
             <h3>4) Support next steps</h3>
             <p class="muted">
@@ -172,14 +185,18 @@
 
     <section class="section">
       <div class="container">
-        <h2>Who we serve</h2>
+        <div class="section-head">
+          <h2>Who we serve</h2>
+          <div class="section-rule"></div>
+        </div>
+
         <p class="sub">
-          Built for organizations that need credible, documented answers.
+          Built for organizations that need credible, documented answers under pressure.
         </p>
 
         <div class="grid">
           <div class="tile">
-            <h3>Organizations in active incidents</h3>
+            <h3>Active incidents</h3>
             <p>Fast direction, scoped action, and clean documentation to reduce uncertainty.</p>
           </div>
           <div class="tile">
@@ -196,7 +213,11 @@
 
     <section class="section alt">
       <div class="container">
-        <h2>Outcomes</h2>
+        <div class="section-head">
+          <h2>Outcomes</h2>
+          <div class="section-rule"></div>
+        </div>
+
         <p class="sub">
           What you should walk away with after an engagement.
         </p>
@@ -212,7 +233,7 @@
           </div>
         </div>
 
-        <div class="two-col" style="margin-top:14px;">
+        <div class="two-col sp-14">
           <div class="callout">
             <h3>Defensible reporting</h3>
             <p class="muted">A documented narrative appropriate for leadership, counsel, or insurers.</p>
@@ -255,6 +276,110 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <!-- Minimal JS: year + nav active + slider -->
+  <script>
+    // Year
+    (function(){ var y=document.getElementById("year"); if(y){ y.textContent = new Date().getFullYear(); } })();
+
+    // Active nav (works with base href)
+    (function(){
+      var links = document.querySelectorAll("[data-nav]");
+      var path = (location.pathname || "").toLowerCase();
+      links.forEach(function(a){
+        var href = (a.getAttribute("href") || "").toLowerCase();
+        if(!href) return;
+        var active = (href === "./" && (path.endsWith("/aetherinsight.github.io/") || path.endsWith("/aetherinsight.github.io/index.html")))
+                  || (href !== "./" && path.indexOf("/aetherinsight.github.io/" + href.replace(/^\.\//,"")) !== -1);
+        if(active) a.classList.add("active");
+      });
+    })();
+
+    // Hero slider
+    (function () {
+      var slides = [
+        {
+          kicker: "Incident Response",
+          title: "Forensics-ready clarity when it matters most.",
+          desc: "Rapid intake and evidence-aware investigation support designed for high-pressure incidents and defensible outcomes.",
+          ctas: [
+            { text: "Request intake", href: "contact/", primary: true },
+            { text: "Explore services", href: "services/", primary: false }
+          ]
+        },
+        {
+          kicker: "Digital Forensics",
+          title: "Defensible timelines, findings, and reporting.",
+          desc: "Acquisition planning and analysis with clear documentation and stakeholder-ready outputs.",
+          ctas: [
+            { text: "Discuss a case", href: "contact/", primary: true },
+            { text: "Forensics services", href: "services/", primary: false }
+          ]
+        },
+        {
+          kicker: "Readiness & Advisory",
+          title: "Reduce incident cost before the incident.",
+          desc: "Playbooks, tabletop support, and pragmatic improvements that reduce confusion and strengthen response readiness.",
+          ctas: [
+            { text: "Request a readiness call", href: "contact/", primary: true },
+            { text: "See advisory options", href: "services/", primary: false }
+          ]
+        }
+      ];
+
+      var hk = document.getElementById("hk");
+      var ht = document.getElementById("ht");
+      var hd = document.getElementById("hd");
+      var hcta = document.getElementById("hcta");
+
+      var dots = Array.prototype.slice.call(document.querySelectorAll(".dot[data-slide]"));
+      var tiles = Array.prototype.slice.call(document.querySelectorAll(".hero-tile[data-slide]"));
+      if (!hk || !ht || !hd || !hcta || dots.length === 0) return;
+
+      var current = 0;
+
+      function setActive(idx) {
+        var s = slides[idx];
+        if (!s) return;
+
+        hk.textContent = s.kicker;
+        ht.textContent = s.title;
+        hd.textContent = s.desc;
+
+        hcta.innerHTML = "";
+        s.ctas.forEach(function(c){
+          var a = document.createElement("a");
+          a.className = c.primary ? "btn" : "btn btn-ghost";
+          a.href = c.href;
+          a.textContent = c.text;
+          hcta.appendChild(a);
+        });
+
+        dots.forEach(function(d,i){
+          var active = i === idx;
+          d.classList.toggle("is-active", active);
+          d.setAttribute("aria-selected", active ? "true" : "false");
+        });
+
+        tiles.forEach(function(t,i){
+          t.classList.toggle("is-active", i === idx);
+        });
+
+        current = idx;
+      }
+
+      dots.forEach(function(btn){
+        btn.addEventListener("click", function(){ setActive(Number(btn.dataset.slide)); pause(); });
+      });
+      tiles.forEach(function(btn){
+        btn.addEventListener("click", function(){ setActive(Number(btn.dataset.slide)); pause(); });
+      });
+
+      // Auto-rotate (optional)
+      var timer = setInterval(function(){ setActive((current + 1) % slides.length); }, 9000);
+      function pause(){
+        if(timer){ clearInterval(timer); timer = null; }
+      }
+    })();
+  </script>
 </body>
 </html>
