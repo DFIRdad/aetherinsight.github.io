@@ -36,24 +36,19 @@
 
   <main id="content">
 
-    <!-- ===== Splash / Above-the-fold ===== -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div>
-          <h1>Forensics-ready clarity when it matters most.</h1>
-          <p class="lead">
-            Aether Insight Forensics supports incident response and digital investigations with
-            evidence-aware execution, clear reporting, and practical next steps.
+    <!-- ===== Splash / Above-the-fold (CrowdStrike-style slider) ===== -->
+    <section class="hero hero-slider" aria-label="Featured highlights">
+      <div class="container hero-inner hero-split">
+
+        <!-- LEFT: copy that changes -->
+        <div class="hero-copy">
+          <div class="hero-kicker" id="hk">Incident Response</div>
+          <h1 id="ht">Forensics-ready clarity when it matters most.</h1>
+          <p class="lead" id="hd">
+            Rapid intake, scoped action, and evidence-aware guidance to reduce uncertainty and protect what matters.
           </p>
 
-          <!-- CrowdStrike-style 3 bullets -->
-          <div class="badges" aria-label="Key points">
-            <span class="badge">Investigation-grade incident response & forensics</span>
-            <span class="badge">Evidence integrity and defensible documentation</span>
-            <span class="badge">Clear timelines, findings, and stakeholder-ready reporting</span>
-          </div>
-
-          <div class="hero-cta">
+          <div class="hero-cta" id="hcta">
             <a class="btn" href="contact/">Request intake</a>
             <a class="btn btn-ghost" href="services/">Explore services</a>
           </div>
@@ -61,21 +56,47 @@
           <p class="sub" style="margin-top:10px;">
             Based in Texas • Remote support available • Confidential by default
           </p>
-        </div>
 
-        <!-- Right-side “what to expect” panel -->
-        <div class="card">
-          <h3>What happens when you reach out</h3>
-          <p class="sub">A quick, structured intake so you get direction fast.</p>
-          <ul>
-            <li>High-level situation overview and constraints</li>
-            <li>Scope alignment and evidence considerations</li>
-            <li>Clear deliverables and next steps</li>
-          </ul>
-          <div style="margin-top:14px;">
-            <a class="btn btn-ghost" href="contact/">Go to contact →</a>
+          <!-- Dots -->
+          <div class="dots" role="tablist" aria-label="Highlight selector">
+            <button class="dot is-active" role="tab" aria-selected="true" aria-controls="hero-panel" data-slide="0">
+              <span class="sr-only">Incident Response</span>
+            </button>
+            <button class="dot" role="tab" aria-selected="false" aria-controls="hero-panel" data-slide="1">
+              <span class="sr-only">Digital Forensics</span>
+            </button>
+            <button class="dot" role="tab" aria-selected="false" aria-controls="hero-panel" data-slide="2">
+              <span class="sr-only">Readiness & Advisory</span>
+            </button>
           </div>
         </div>
+
+        <!-- RIGHT: 3 clickable tiles (also change slide) -->
+        <div class="hero-panel" id="hero-panel" role="tabpanel" tabindex="0" aria-live="polite">
+          <div class="hero-tiles">
+            <button class="hero-tile is-active" data-slide="0">
+              <div class="tile-eyebrow">Incident Response</div>
+              <div class="tile-title">Triage and direction fast</div>
+              <div class="tile-desc">Containment guidance, scope control, and evidence-aware decisioning.</div>
+              <div class="tile-link">Learn more →</div>
+            </button>
+
+            <button class="hero-tile" data-slide="1">
+              <div class="tile-eyebrow">Digital Forensics</div>
+              <div class="tile-title">Timelines and defensible findings</div>
+              <div class="tile-desc">Acquisition planning, analysis, and reporting you can brief to stakeholders.</div>
+              <div class="tile-link">Learn more →</div>
+            </button>
+
+            <button class="hero-tile" data-slide="2">
+              <div class="tile-eyebrow">Readiness & Advisory</div>
+              <div class="tile-title">Be ready before it hits</div>
+              <div class="tile-desc">Playbooks, tabletop support, process uplift, and pragmatic controls.</div>
+              <div class="tile-link">Learn more →</div>
+            </button>
+          </div>
+        </div>
+
       </div>
     </section>
 
